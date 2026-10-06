@@ -76,8 +76,11 @@ The root is already set up and is not changed. `src/main.tsx` wraps the whole ap
 The provider writes density, scheme and theme onto the page and holds the unit system, the icons,
 the toasts and the confirm dialog. Change density or theme through its props, never by writing
 `data-lt-density` or `data-lt-theme`, because the provider owns those attributes and a second
-writer fights it. The theme is operational (grey first, colour kept for meaning), which suits an
-internal tool; commercial is only for a surface that sits beside Livetools marketing.
+writer fights it. The theme is functional (grey first, colour kept for meaning; it was called
+operational before @livetools/ui 2.0.0, and the old name still works until 3.0.0), which suits
+an internal tool; marketing is only for a page that sits beside Livetools marketing, and is light
+on every device. The scheme is light here; since 2.0.0 "dark" means dark working panels, and
+"grey" is the dark band with light grey panels that "dark" meant before.
 
 The rules, in the form they take in this app:
 
@@ -100,8 +103,8 @@ The rules, in the form they take in this app:
 - Every field has a label: the `label` prop is required on every field part. A validation error
   sits under its field and never floats, so the person sees which input is wrong.
 - A page is a `Shell` header over a `Panel` main, and controls go only on the `Panel`, because
-  the panel stays light in both schemes and that is what lets blue and red keep their exact
-  values.
+  the panel carries its own ink in every scheme (light in Light and Grey, charcoal in Dark) and
+  that is what lets blue and red keep their exact values.
 - Lists of things are data in props (`items`, `columns`, `rows`, a `detail` render prop), never
   markup, because the part owns the markup. Never reach into a part with a ref and change it; use
   only the methods PARTS.md lists.

@@ -172,9 +172,9 @@ export function Tools() {
   function rowMenu(tool: Tool): readonly RowMenuItem[] {
     return [
       { kind: "action", label: tool.checkedOut ? "Return" : "Check out", onSelect: () => toggleOut(tool) },
-      { kind: "action", label: "Edit", icon: "pencil", onSelect: () => openDialog(tool) },
+      { kind: "action", label: "Edit", onSelect: () => openDialog(tool) },
       { kind: "separator" },
-      { kind: "action", label: "Delete", danger: true, icon: "slash", onSelect: () => void remove(tool) },
+      { kind: "action", label: "Delete", danger: true, onSelect: () => void remove(tool) },
     ];
   }
 

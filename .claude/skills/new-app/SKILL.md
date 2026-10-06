@@ -36,7 +36,7 @@ Ask these two, together, in one message, and nothing else:
    This is the brief for the first screen and the app's description.
 
 Do not ask about the look, the theme, colours, density, hosting or an address. Every one of
-those has its answer already: the operational theme, the standard GitHub Pages address, public,
+those has its answer already: the functional theme, the standard GitHub Pages address, public,
 no commercial transactions and no software-as-a-service (the template's `CLAUDE.md`, "What may
 not be built here"). If the request is one of those forbidden kinds, say so plainly before
 creating anything and stop.
